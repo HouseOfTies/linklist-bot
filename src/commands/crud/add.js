@@ -9,7 +9,7 @@ export default function add(bot, message, value){
             url: value[2],
         });
         link.save();
-        bot.sendMessage(message.chat.id, `Nombre: ${value[1]}\nURL: ${value[2]}\n\nLink agregado 📝`);
+        bot.sendMessage(message.chat.id, `Link agregado 📝\n\nNombre: ${value[1]}\nURL: ${value[2]}`);
     } 
     else {
         bot.sendMessage(message.chat.id, `Introduce una url existente`);

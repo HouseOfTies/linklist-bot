@@ -11,6 +11,6 @@ export default async function read(bot, message){
         links.forEach(link => {
             resTemplate += `Id: ${link.id}\nNombre: ${link.name}\nURL: ${link.url}\n\n`
         });
-        bot.sendMessage(message.chat.id, resTemplate);
+        bot.sendMessage(message.chat.id, resTemplate, {disable_web_page_preview: true});
     }
 }
