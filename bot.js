@@ -15,9 +15,4 @@ bot.on('polling_error', error => {
 	console.log(error);
 });
 
-bot.on('message', message => {
-	if(message.chat.id == `${homeId}` || message.from.id == `${ownerId}`){
-		commands({bot});
-	}
-	console.log(message);
-  });
+commands({bot});
