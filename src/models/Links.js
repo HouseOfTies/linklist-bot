@@ -16,5 +16,6 @@ LinksSchema.plugin(AutoIncrement, {inc_field: 'id'});
 
 const LinkModel = model('Links', LinksSchema);
 
+
 export default LinkModel;
 
