@@ -4,5 +4,5 @@ update = "Este comando require de tres 3 parametros [id] [nombre] [url] para pod
 remove = "Este comando solo requiere de el id a borrar. Ejemplo: /remove 1";
 
 export default function info(bot, message){
-    bot.sendMessage(message.chat.id, `Los comandos para manipular links son: \n\n/add\n/read\n/update\n/remove\n\n${add}\n${read}\n${update}\n${remove}`);
+    bot.sendMessage(message.chat.id, `Los comandos para manipular links son: \n\n/add\n/read\n/update\n/remove\n\n${add}\n\n${read}\n\n${update}\n\n${remove}`,{disable_web_page_preview: true});
 }
