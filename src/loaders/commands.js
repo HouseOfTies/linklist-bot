@@ -7,7 +7,7 @@ export default async function commands({ bot }){
         start(bot, message);
     });
 
-    bot.onText(/\/commands/, async (message) => {
+    bot.onText(/\/info/, async (message) => {
         info(bot, message);
     });
 
