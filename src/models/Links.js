@@ -1,8 +1,12 @@
 import pkg from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config('./');
+
+const uri = process.env.MONGOATLAS_URI || process.env.MONGODB_URI;
 
 import AutoIncrementFactory from 'mongoose-sequence';
 
-const connection = pkg.createConnection("mongodb://localhost/linkilist");
+const connection = pkg.createConnection(uri);
 
 const AutoIncrement = AutoIncrementFactory(connection);
 
@@ -15,7 +19,6 @@ const LinksSchema = new Schema({
 LinksSchema.plugin(AutoIncrement, {inc_field: 'id'});
 
 const LinkModel = model('Links', LinksSchema);
-
 
 export default LinkModel;
 
